@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   <body>
+        <h1>이미지 채색하기</h1>
+
+        <!-- 저장한 이미지를 출력한다. -->
+        <img src="/static/{{ label }}" width="400" height="400">
+        <div>
+            <form action="/image/image_colorization" method="POST" enctype="multipart/form-data">
+                <h1>의류 카테고리 선택</h1>
+                <input type="radio" name = "clothes" value="pre_toggle_0">
+                <span>상의 </span>
+                <br>
+        
+                <input type="radio" name = "clothes" value="pre_toggle_1">
+                <span>하의 </span>
+                <br>
+        
+                <input type="radio" name = "clothes" value="pre_toggle_2">
+                <span>모자 </span>
+                <br>
+
+                <input type="radio" name = "clothes" value="pre_toggle_3">
+                <span>치마 </span>
+                <br>
+                <button>이미지 채색</button>
+            <form>
+        </div>
+   </body>
+</html>

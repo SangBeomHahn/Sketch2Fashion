@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <title>손그림 의류 검색 서비스</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        h1{font-family: 'Noto Sans KR', sans-serif;}
+        body{font-family: 'Noto Sans KR', sans-serif;}
+    </style>
+</head>
+<body>
+    <h1>손그림 의류 검색 서비스</h1>
+    <h3><a href="ztyle.html">ztyle 소개</a></h3>
+    <p>
+        사용자의 스케치를 기반으로 생성한 이미지의 검색 결과입니다.
+        <br> 아래 이미지를 눌러 링크로 이동해보세요.
+    </p>
+
+
+{% if pictures %}
+    {% for picture in pictures %}
+
+        <a href="{{ picture[0] }}" target="blink" title="링크로 이동하기">
+        <img src="{{ picture[1] }}" width="{{ width }}" height="{{ height}}"
+        onerror="this.style.display='none'"
+        style="border-style: none"/></a>
+
+    {% endfor %}
+
+{% endif %}
+
+</body>
+</html>
